@@ -1,0 +1,25 @@
+name: My First Pipeline
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout Repository
+        uses: actions/actions/checkout@v4
+
+      - name: Print Welcome Message 
+        run: echo "Hello DevOps Students!"
+
+      - name: Display date
+        run: date 
+
+      - name: Display Current user
+        run: whoami
+
+      - name: show files
+        run: ls -ltr
+
+      - name: Pipeline Success
+        run: echo "Pipeline executed Successfully"
