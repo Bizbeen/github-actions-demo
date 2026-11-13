@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Update the packages 
-        run: apt-get update
+        run: sudo apt-get update
         
       - name: Display disk file system
         run: df -hT /
