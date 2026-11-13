@@ -1,25 +1,16 @@
-name: My First Pipeline
+name: Java CI Pipeline
 on:
   push:
+    branches:
+      - main
 
 jobs:
-  build:
+  first-job:
     runs-on: ubuntu-latest
-    steps: 
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Print Welcome Message 
-        run: echo "Hello DevOps Students!"
-
-      - name: Display date
-        run: date 
-
-      - name: Display Current user
-        run: whoami
-
-      - name: show files
-        run: ls -ltr
-
-      - name: Pipeline Success
-        run: echo "Pipeline executed Successfully"
+    steps:
+      - name: Print welcome message
+        run: echo"Welcome to GithUb Actions"
+      - name: Display Current Working directory
+        run: pwd
+	  - name: Disaply system information
+        run: uname -a 
