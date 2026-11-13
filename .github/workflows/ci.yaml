@@ -17,3 +17,15 @@ jobs:
 
       - name: Display system information
         run: uname -a
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update the packages 
+        run: apt-get update
+        
+      - name: Display disk file system
+        run: df -hT /
+
+      - name: Display memory info
+        run: free -h 
+  
